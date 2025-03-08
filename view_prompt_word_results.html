@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大屏展示</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 1920px;
+      height: 1080px;
+      position: relative;
+    }
+
+    .component {
+      position: absolute;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 引用 data.js 文件 -->
+  <script src="./view_prompt_word_results.js"></script>
+  <script>
+    function renderComponents() {
+      jsonData.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'component';
+        div.style.left = `${item.x}px`;
+        div.style.top = `${item.y}px`;
+        div.style.width = `${item.w}px`;
+        div.style.height = `${item.h}px`;
+
+        const title = document.createElement('h3');
+        title.textContent = `Type: ${item.type} | Style: ${item.style}`;
+        div.appendChild(title);
+
+        const metricsInfo = document.createElement('p');
+        let metricsText = '';
+        for (const [source, indicators] of Object.entries(item.data)) {
+          metricsText += `数据源: ${source}, 指标: ${indicators.join(', ')}`;
+        }
+        metricsInfo.textContent = metricsText;
+        div.appendChild(metricsInfo);
+
+        document.body.appendChild(div);
+      });
+    }
+
+    renderComponents();
+  </script>
+</body>
+
+</html>

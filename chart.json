@@ -1,0 +1,92 @@
+{
+    "基础折线图": {
+        "type": "linechart",
+        "data_type": ['time']
+        "style": "normal"
+    },
+    "曲线折线图": {
+        "type": "linechart",
+        "data_type": ['time']
+        "style": "curve"
+    },
+    "双轴折线图": {
+        "type": "linechart",
+        "data_type": ['time']
+        "style": "double"
+    },
+    "面积图": {
+        "type": "linechart",
+        "data_type": ['time']
+        "style": "area"
+    },
+    "基础柱状图": {
+        "type": "barchart",
+        "data_type": ['top']
+        "style": "normal"
+    },
+    "多柱形图": {
+        "type": "barchart",
+        "data_type": ['top']
+        "style": "group"
+    },
+    "堆叠柱状图": {
+        "type": "barchart",
+        "data_type": ['top']
+        "style": "stack"
+    },
+    "基础条形图": {
+        "type": "barchart",
+        "data_type": ['top']
+        "style": "horizontal"
+    },
+    "折线柱状图": {
+        "type": "barchart",
+        "data_type": ['top']
+        "style": "linebar"
+    },
+    "基本饼图": {
+        "type": "piechart",
+        "data_type": ['total']
+        "style": "label"
+    },
+    "内标签饼图": {
+        "type": "piechart",
+        "data_type": ['total']
+        "style": "normal"
+    },
+    "南丁格尔图": {
+        "type": "piechart",
+        "data_type": ['total']
+        "style": "rose"
+    },
+    "环形饼图": {
+        "type": "piechart",
+        "data_type": ['total']
+        "style": "ring"
+    },
+    "基础表格": {
+        "type": "datatable",
+        "data_type": ['raw']
+        "style": "normal"
+    },
+    "轮播列表": {
+        "type": "datatable",
+        "data_type": ['raw']
+        "style": "scrolltable"
+    },
+    "告警列表": {
+        "type": "datatable",
+        "data_type": ['raw']
+        "style": "alarmtable"
+    },
+    "TOP排序表": {
+        "type": "list",
+        "data_type": ['top']
+        "style": "top"
+    },
+    "排序卡片": {
+        "type": "list",
+        "data_type": ['top']
+        "style": "normal"
+    },
+}

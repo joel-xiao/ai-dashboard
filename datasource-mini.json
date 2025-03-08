@@ -1,0 +1,1638 @@
+{
+    "datasource-agent-jvm-stats": {
+        "name": "探针JVM汇总",
+        "datasource": "datasource-agent-jvm-stats",
+        "category": "application",
+        "data_type": "total",
+        "metrics": {
+            "cpu": {
+                "metric": "cpu",
+                "label": "CPU利用率",
+                "description": ""
+            },
+            "mem": {
+                "metric": "mem",
+                "label": "内存利用率",
+                "description": ""
+            }
+        }
+    },
+    "datasource-agent-jvm-states--v2": {
+        "name": "探针JVM统计",
+        "datasource": "datasource-agent-jvm-states--v2",
+        "category": "application",
+        "data_type": "top",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "agentid": {
+                "metric": "agentid",
+                "isDimension": true,
+                "label": "应用实例",
+                "description": ""
+            },
+            "max_heap_max": {
+                "metric": "max_heap_max",
+                "label": "最大堆内存",
+                "description": ""
+            },
+            "max_heap_used": {
+                "metric": "max_heap_used",
+                "label": "最大已使用堆内存",
+                "description": ""
+            },
+            "min_heap_used": {
+                "metric": "min_heap_used",
+                "label": "最小已使用堆内存",
+                "description": ""
+            },
+            "avg_heap_used": {
+                "metric": "avg_heap_used",
+                "label": "平均已使用堆内存",
+                "description": ""
+            },
+            "max_non_heap_total": {
+                "metric": "max_non_heap_total",
+                "label": "最大非堆内存",
+                "description": ""
+            },
+            "max_non_heap_used": {
+                "metric": "max_non_heap_used",
+                "label": "最大已使用非堆内存",
+                "description": ""
+            },
+            "min_non_heap_used": {
+                "metric": "min_non_heap_used",
+                "label": "最小已使用非堆内存",
+                "description": ""
+            },
+            "avg_non_heap_used": {
+                "metric": "avg_non_heap_used",
+                "label": "平均已使用非堆内存",
+                "description": ""
+            },
+            "max_perm_gen_max": {
+                "metric": "max_perm_gen_max",
+                "label": "最大永久代内存",
+                "description": ""
+            },
+            "max_perm_gen_used": {
+                "metric": "max_perm_gen_used",
+                "label": "最大已使用永久代内存",
+                "description": ""
+            },
+            "min_perm_gen_used": {
+                "metric": "min_perm_gen_used",
+                "label": "最小已使用永久代内存",
+                "description": ""
+            },
+            "avg_perm_gen_used": {
+                "metric": "avg_perm_gen_used",
+                "label": "平均已使用永久代内存",
+                "description": ""
+            },
+            "max_survivor_space_max": {
+                "metric": "max_survivor_space_max",
+                "label": "最大幸存区",
+                "description": ""
+            },
+            "max_survivor_space_used": {
+                "metric": "max_survivor_space_used",
+                "label": "最大已使用幸存区",
+                "description": ""
+            },
+            "min_survivor_space_used": {
+                "metric": "min_survivor_space_used",
+                "label": "最小已使用幸存区",
+                "description": ""
+            },
+            "avg_survivor_space_used": {
+                "metric": "avg_survivor_space_used",
+                "label": "平均已使用幸存区",
+                "description": ""
+            },
+            "max_metaspace_total": {
+                "metric": "max_metaspace_total",
+                "label": "最大元空间",
+                "description": ""
+            },
+            "max_metaspace_committed": {
+                "metric": "max_metaspace_committed",
+                "label": "最大元空间分配",
+                "description": ""
+            },
+            "min_metaspace_committed": {
+                "metric": "min_metaspace_committed",
+                "label": "最小元空间分配",
+                "description": ""
+            },
+            "avg_metaspace_committed": {
+                "metric": "avg_metaspace_committed",
+                "label": "平均元空间分配",
+                "description": ""
+            },
+            "max_metaspace_used": {
+                "metric": "max_metaspace_used",
+                "label": "最大已使用元空间",
+                "description": ""
+            },
+            "min_metaspace_used": {
+                "metric": "min_metaspace_used",
+                "label": "最小已使用元空间",
+                "description": ""
+            },
+            "avg_metaspace_used": {
+                "metric": "avg_metaspace_used",
+                "label": "平均已使用元空间",
+                "description": ""
+            },
+            "max_old_gen_max": {
+                "metric": "max_old_gen_max",
+                "label": "最大年老代内存",
+                "description": ""
+            },
+            "max_old_gen_used": {
+                "metric": "max_old_gen_used",
+                "label": "最大已使用年老代内存",
+                "description": ""
+            },
+            "min_old_gen_used": {
+                "metric": "min_old_gen_used",
+                "label": "最小已使用年老代内存",
+                "description": ""
+            },
+            "avg_old_gen_used": {
+                "metric": "avg_old_gen_used",
+                "label": "平均已使用年老代内存",
+                "description": ""
+            },
+            "max_new_gen_max": {
+                "metric": "max_new_gen_max",
+                "label": "最大年轻代内存",
+                "description": ""
+            },
+            "max_new_gen_used": {
+                "metric": "max_new_gen_used",
+                "label": "最大已使用年轻代内存",
+                "description": ""
+            },
+            "min_new_gen_used": {
+                "metric": "min_new_gen_used",
+                "label": "最小已使用年轻代内存",
+                "description": ""
+            },
+            "avg_new_gen_used": {
+                "metric": "avg_new_gen_used",
+                "label": "平均已使用年轻代内存",
+                "description": ""
+            },
+            "max_jvm_cpu": {
+                "metric": "max_jvm_cpu",
+                "label": "最大CPU百分比",
+                "description": ""
+            },
+            "min_jvm_cpu": {
+                "metric": "min_jvm_cpu",
+                "label": "最小CPU百分比",
+                "description": ""
+            },
+            "avg_jvm_cpu": {
+                "metric": "avg_jvm_cpu",
+                "label": "平均CPU百分比",
+                "description": ""
+            },
+            "max_sys_cpu": {
+                "metric": "max_sys_cpu",
+                "label": "最大系统CPU百分比",
+                "description": ""
+            },
+            "min_sys_cpu": {
+                "metric": "min_sys_cpu",
+                "label": "最小系统CPU百分比",
+                "description": ""
+            },
+            "avg_sys_cpu": {
+                "metric": "avg_sys_cpu",
+                "label": "平均系统CPU百分比",
+                "description": ""
+            },
+            "fgc_count": {
+                "metric": "fgc_count",
+                "label": "FGC 次数",
+                "description": ""
+            },
+            "fgc_time": {
+                "metric": "fgc_time",
+                "label": "FGC Time",
+                "description": ""
+            }
+        }
+    },
+    "datasource-agent-jvm-timeseries": {
+        "name": "探针JVM时间线",
+        "datasource": "datasource-agent-jvm-timeseries",
+        "category": "application",
+        "data_type": "time",
+        "metrics": {
+            "max_heap_max": {
+                "metric": "max_heap_max",
+                "label": "最大堆内存",
+                "description": ""
+            },
+            "max_heap_used": {
+                "metric": "max_heap_used",
+                "label": "最大已使用堆内存",
+                "description": ""
+            },
+            "min_heap_used": {
+                "metric": "min_heap_used",
+                "label": "最小已使用堆内存",
+                "description": ""
+            },
+            "avg_heap_used": {
+                "metric": "avg_heap_used",
+                "label": "平均已使用堆内存",
+                "description": ""
+            },
+            "max_non_heap_total": {
+                "metric": "max_non_heap_total",
+                "label": "最大非堆内存",
+                "description": ""
+            },
+            "max_non_heap_used": {
+                "metric": "max_non_heap_used",
+                "label": "最大已使用非堆内存",
+                "description": ""
+            },
+            "min_non_heap_used": {
+                "metric": "min_non_heap_used",
+                "label": "最小已使用非堆内存",
+                "description": ""
+            },
+            "avg_non_heap_used": {
+                "metric": "avg_non_heap_used",
+                "label": "平均已使用非堆内存",
+                "description": ""
+            },
+            "max_perm_gen_max": {
+                "metric": "max_perm_gen_max",
+                "label": "最大永久代内存",
+                "description": ""
+            },
+            "max_perm_gen_used": {
+                "metric": "max_perm_gen_used",
+                "label": "最大已使用永久代内存",
+                "description": ""
+            },
+            "min_perm_gen_used": {
+                "metric": "min_perm_gen_used",
+                "label": "最小已使用永久代内存",
+                "description": ""
+            },
+            "avg_perm_gen_used": {
+                "metric": "avg_perm_gen_used",
+                "label": "平均已使用永久代内存",
+                "description": ""
+            },
+            "max_survivor_space_max": {
+                "metric": "max_survivor_space_max",
+                "label": "最大幸存区",
+                "description": ""
+            },
+            "max_survivor_space_used": {
+                "metric": "max_survivor_space_used",
+                "label": "最大已使用幸存区",
+                "description": ""
+            },
+            "min_survivor_space_used": {
+                "metric": "min_survivor_space_used",
+                "label": "最小已使用幸存区",
+                "description": ""
+            },
+            "avg_survivor_space_used": {
+                "metric": "avg_survivor_space_used",
+                "label": "平均已使用幸存区",
+                "description": ""
+            },
+            "max_metaspace_total": {
+                "metric": "max_metaspace_total",
+                "label": "最大元空间",
+                "description": ""
+            },
+            "max_metaspace_committed": {
+                "metric": "max_metaspace_committed",
+                "label": "最大元空间分配",
+                "description": ""
+            },
+            "min_metaspace_committed": {
+                "metric": "min_metaspace_committed",
+                "label": "最小元空间分配",
+                "description": ""
+            },
+            "avg_metaspace_committed": {
+                "metric": "avg_metaspace_committed",
+                "label": "平均元空间分配",
+                "description": ""
+            },
+            "max_metaspace_used": {
+                "metric": "max_metaspace_used",
+                "label": "最大已使用元空间",
+                "description": ""
+            },
+            "min_metaspace_used": {
+                "metric": "min_metaspace_used",
+                "label": "最小已使用元空间",
+                "description": ""
+            },
+            "avg_metaspace_used": {
+                "metric": "avg_metaspace_used",
+                "label": "平均已使用元空间",
+                "description": ""
+            },
+            "max_old_gen_max": {
+                "metric": "max_old_gen_max",
+                "label": "最大年老代内存",
+                "description": ""
+            },
+            "max_old_gen_used": {
+                "metric": "max_old_gen_used",
+                "label": "最大已使用年老代内存",
+                "description": ""
+            },
+            "min_old_gen_used": {
+                "metric": "min_old_gen_used",
+                "label": "最小已使用年老代内存",
+                "description": ""
+            },
+            "avg_old_gen_used": {
+                "metric": "avg_old_gen_used",
+                "label": "平均已使用年老代内存",
+                "description": ""
+            },
+            "max_new_gen_max": {
+                "metric": "max_new_gen_max",
+                "label": "最大年轻代内存",
+                "description": ""
+            },
+            "max_new_gen_used": {
+                "metric": "max_new_gen_used",
+                "label": "最大已使用年轻代内存",
+                "description": ""
+            },
+            "min_new_gen_used": {
+                "metric": "min_new_gen_used",
+                "label": "最小已使用年轻代内存",
+                "description": ""
+            },
+            "avg_new_gen_used": {
+                "metric": "avg_new_gen_used",
+                "label": "平均已使用年轻代内存",
+                "description": ""
+            },
+            "max_jvm_cpu": {
+                "metric": "max_jvm_cpu",
+                "label": "最大CPU百分比",
+                "description": ""
+            },
+            "min_jvm_cpu": {
+                "metric": "min_jvm_cpu",
+                "label": "最小CPU百分比",
+                "description": ""
+            },
+            "avg_jvm_cpu": {
+                "metric": "avg_jvm_cpu",
+                "label": "平均CPU百分比",
+                "description": ""
+            },
+            "max_sys_cpu": {
+                "metric": "max_sys_cpu",
+                "label": "最大系统CPU百分比",
+                "description": ""
+            },
+            "min_sys_cpu": {
+                "metric": "min_sys_cpu",
+                "label": "最小系统CPU百分比",
+                "description": ""
+            },
+            "avg_sys_cpu": {
+                "metric": "avg_sys_cpu",
+                "label": "平均系统CPU百分比",
+                "description": ""
+            },
+            "fgc_time": {
+                "metric": "fgc_time",
+                "label": "FGC",
+                "description": ""
+            }
+        }
+    },
+    "datasource-agents": {
+        "name": "探针详情数据",
+        "datasource": "datasource-agents",
+        "category": "application",
+        "data_type": "raw",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "label": "应用",
+                "description": ""
+            },
+            "id": {
+                "metric": "id",
+                "label": "实例名称",
+                "description": ""
+            },
+            "ip": {
+                "metric": "ip",
+                "label": "IP地址",
+                "description": ""
+            },
+            "gc_count": {
+                "metric": "gc_count",
+                "label": "FullGC次数",
+                "description": ""
+            },
+            "thread_num": {
+                "metric": "thread_num",
+                "label": "线程数",
+                "description": ""
+            },
+            "jdbc_conn_num": {
+                "metric": "jdbc_conn_num",
+                "label": "jdbc连接数",
+                "description": ""
+            },
+            "exception_count": {
+                "metric": "exception_count",
+                "label": "异常次数",
+                "description": ""
+            },
+            "perm_gen_usage": {
+                "metric": "perm_gen_usage",
+                "label": "永久代",
+                "description": ""
+            },
+            "mem_usage": {
+                "metric": "mem_usage",
+                "label": "内存使用率",
+                "description": ""
+            },
+            "status": {
+                "metric": "status",
+                "label": "探针状态",
+                "description": ""
+            },
+            "collection_status": {
+                "metric": "collection_status",
+                "label": "采集状态",
+                "description": ""
+            },
+            "start_timestamp": {
+                "metric": "start_timestamp",
+                "label": "启动时间",
+                "description": ""
+            },
+            "running_time": {
+                "metric": "running_time",
+                "label": "运行时长",
+                "description": ""
+            },
+            "last_ts": {
+                "metric": "last_ts",
+                "label": "最后心跳",
+                "description": ""
+            },
+            "version": {
+                "metric": "version",
+                "label": "探针版本",
+                "description": ""
+            },
+            "server": {
+                "metric": "server",
+                "label": "服务类型",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "label": "操作系统",
+                "description": ""
+            },
+            "hostname": {
+                "metric": "hostname",
+                "label": "主机",
+                "description": ""
+            },
+            "gc": {
+                "metric": "gc",
+                "label": "GC类型",
+                "description": ""
+            },
+            "pid": {
+                "metric": "pid",
+                "label": "PID",
+                "description": ""
+            },
+            "os_version": {
+                "metric": "os_version",
+                "label": "操作系统版本",
+                "description": ""
+            }
+        }
+    },
+    "datasource-application-status": {
+        "name": "请求状态统计",
+        "datasource": "datasource-application-status",
+        "category": "application",
+        "data_type": "total",
+        "metrics": {
+            "total": {
+                "metric": "total",
+                "label": "请求数",
+                "description": ""
+            },
+            "fast": {
+                "metric": "fast",
+                "label": "快速数",
+                "description": ""
+            },
+            "dur": {
+                "metric": "dur",
+                "label": "响应时间",
+                "description": ""
+            },
+            "slow": {
+                "metric": "slow",
+                "label": "缓慢数",
+                "description": ""
+            },
+            "slow_rate": {
+                "metric": "slow_rate",
+                "label": "缓慢率",
+                "description": ""
+            },
+            "frustrated": {
+                "metric": "frustrated",
+                "label": "极慢数",
+                "description": ""
+            },
+            "frustrated_rate": {
+                "metric": "frustrated_rate",
+                "label": "极慢率",
+                "description": ""
+            },
+            "err": {
+                "metric": "err",
+                "label": "错误数",
+                "description": ""
+            },
+            "err_rate": {
+                "metric": "err_rate",
+                "label": "错误率",
+                "description": ""
+            },
+            "fail": {
+                "metric": "fail",
+                "label": "失败数",
+                "description": ""
+            },
+            "fail_rate": {
+                "metric": "fail_rate",
+                "label": "失败率",
+                "description": ""
+            },
+            "apdex": {
+                "metric": "apdex",
+                "label": "APDEX",
+                "description": ""
+            },
+            "neterr": {
+                "metric": "neterr",
+                "label": "网络错误数",
+                "description": ""
+            },
+            "httperr": {
+                "metric": "httperr",
+                "label": "http错误数",
+                "description": ""
+            },
+            "err_4xx": {
+                "metric": "err_4xx",
+                "label": "4XX 错误数",
+                "description": ""
+            },
+            "err_4xx_rate": {
+                "metric": "err_4xx_rate",
+                "label": "4XX 错误率",
+                "description": ""
+            },
+            "err_5xx": {
+                "metric": "err_5xx",
+                "label": "5XX 错误数",
+                "description": ""
+            },
+            "err_5xx_rate": {
+                "metric": "err_5xx_rate",
+                "label": "5XX 错误率",
+                "description": ""
+            },
+            "exception": {
+                "metric": "exception",
+                "label": "异常数",
+                "description": ""
+            },
+            "biz": {
+                "metric": "biz",
+                "label": "业务数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-application-status-tps": {
+        "name": "请求状态统计",
+        "datasource": "datasource-application-status-tps",
+        "category": "application",
+        "data_type": "object",
+        "metrics": {
+            "avg_tps": {
+                "metric": "avg_tps",
+                "label": "平均TPS",
+                "description": ""
+            },
+            "max_tps": {
+                "metric": "max_tps",
+                "label": "最大TPS",
+                "description": ""
+            },
+            "min_tps": {
+                "metric": "min_tps",
+                "label": "最小TPS",
+                "description": ""
+            }
+        }
+    },
+    "datasource-crash-error-states": {
+        "name": "崩溃异常统计",
+        "datasource": "datasource-crash-error-states",
+        "category": "application",
+        "data_type": "object",
+        "metrics": {
+            "user_count": {
+                "metric": "user_count",
+                "label": "影响用户数",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "崩溃次数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-crash-error-states--v2": {
+        "name": "崩溃异常统计",
+        "datasource": "datasource-crash-error-states--v2",
+        "category": "application",
+        "data_type": "top",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "name": {
+                "metric": "name",
+                "isDimension": true,
+                "label": "崩溃名称",
+                "description": ""
+            },
+            "type": {
+                "metric": "type",
+                "isDimension": true,
+                "label": "崩溃类型",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "isDimension": true,
+                "label": "操作系统",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "isDimension": true,
+                "label": "APP版本",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "isDimension": true,
+                "label": "设备型号",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "崩溃次数",
+                "description": ""
+            },
+            "user_count": {
+                "metric": "user_count",
+                "label": "影响用户数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-crash-states": {
+        "name": "崩溃指标统计",
+        "datasource": "datasource-crash-states",
+        "category": "application",
+        "data_type": "stats",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "name": {
+                "metric": "name",
+                "isDimension": true,
+                "label": "崩溃名称",
+                "description": ""
+            },
+            "type": {
+                "metric": "type",
+                "isDimension": true,
+                "label": "崩溃类型",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "isDimension": true,
+                "label": "操作系统",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "isDimension": true,
+                "label": "APP版本",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "isDimension": true,
+                "label": "设备型号",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "崩溃次数",
+                "description": ""
+            },
+            "last_time": {
+                "metric": "last_time",
+                "label": "最近出现时间",
+                "description": ""
+            },
+            "user_count": {
+                "metric": "user_count",
+                "label": "影响用户数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-crash-states-cnt": {
+        "name": "崩溃统计数量",
+        "datasource": "datasource-crash-states-cnt",
+        "category": "application",
+        "data_type": "total",
+        "metrics": {
+            "total": {
+                "metric": "total",
+                "label": "崩溃次数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-crash-timeseries": {
+        "name": "崩溃时间线",
+        "datasource": "datasource-crash-timeseries",
+        "category": "application",
+        "data_type": "time",
+        "metrics": {
+            "total": {
+                "metric": "total",
+                "label": "崩溃次数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-crashs": {
+        "name": "崩溃详情数据",
+        "datasource": "datasource-crashs",
+        "category": "application",
+        "data_type": "raw",
+        "metrics": {
+            "ts": {
+                "metric": "ts",
+                "label": "发生时间",
+                "description": ""
+            },
+            "appsysid": {
+                "metric": "appsysid",
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "label": "应用",
+                "description": ""
+            },
+            "desc": {
+                "metric": "desc",
+                "label": "崩溃名称",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "label": "应用版本",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "label": "操作系统",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "label": "设备型号",
+                "description": ""
+            },
+            "user_id": {
+                "metric": "user_id",
+                "label": "用户ID",
+                "description": ""
+            },
+            "session_id": {
+                "metric": "session_id",
+                "label": "会话ID",
+                "description": ""
+            },
+            "error": {
+                "metric": "error",
+                "label": "异常信息",
+                "description": ""
+            },
+            "city": {
+                "metric": "city",
+                "label": "城市",
+                "description": ""
+            },
+            "province": {
+                "metric": "province",
+                "label": "省份",
+                "description": ""
+            },
+            "ip": {
+                "metric": "ip",
+                "label": "IP",
+                "description": ""
+            }
+        }
+    },
+    "datasource-exception-states": {
+        "name": "异常统计",
+        "datasource": "datasource-exception-states",
+        "category": "application",
+        "data_type": "stats",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "name": {
+                "metric": "name",
+                "isDimension": true,
+                "label": "异常名称",
+                "description": ""
+            },
+            "url": {
+                "metric": "url",
+                "isDimension": true,
+                "label": "URL",
+                "description": ""
+            },
+            "request_total": {
+                "metric": "request_total",
+                "label": "请求数",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "异常数",
+                "description": ""
+            },
+            "per": {
+                "metric": "per",
+                "label": "异常占比",
+                "description": ""
+            },
+            "last_time": {
+                "metric": "last_time",
+                "label": "最近发生时间",
+                "description": ""
+            },
+            "diff": {
+                "metric": "diff",
+                "label": "异常变化",
+                "description": ""
+            }
+        }
+    },
+    "datasource-exception-states--v2": {
+        "name": "异常统计",
+        "datasource": "datasource-exception-states--v2",
+        "category": "application",
+        "data_type": "top",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "name": {
+                "metric": "name",
+                "isDimension": true,
+                "label": "异常名称",
+                "description": ""
+            },
+            "url": {
+                "metric": "url",
+                "isDimension": true,
+                "label": "URL",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "异常数",
+                "description": ""
+            },
+            "per": {
+                "metric": "per",
+                "label": "异常占比",
+                "description": ""
+            }
+        }
+    },
+    "datasource-exception-states-cnt": {
+        "name": "异常统计数量",
+        "datasource": "datasource-exception-states-cnt",
+        "category": "application",
+        "data_type": "total",
+        "metrics": {
+            "total": {
+                "metric": "total",
+                "label": "异常数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-exception-timeseries": {
+        "name": "异常时间线",
+        "datasource": "datasource-exception-timeseries",
+        "category": "application",
+        "data_type": "time",
+        "metrics": {
+            "total": {
+                "metric": "total",
+                "label": "异常数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-application-exceptions": {
+        "name": "异常详情数据",
+        "datasource": "datasource-application-exceptions",
+        "category": "application",
+        "data_type": "raw",
+        "metrics": {
+            "time": {
+                "metric": "time",
+                "label": "时间",
+                "description": ""
+            },
+            "appsysid": {
+                "metric": "appsysid",
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "label": "应用",
+                "description": ""
+            },
+            "name": {
+                "metric": "name",
+                "label": "异常名称",
+                "description": ""
+            },
+            "message": {
+                "metric": "message",
+                "label": "错误信息",
+                "description": ""
+            },
+            "method": {
+                "metric": "method",
+                "label": "方法",
+                "description": ""
+            },
+            "class": {
+                "metric": "class",
+                "label": "类",
+                "description": ""
+            },
+            "interface": {
+                "metric": "interface",
+                "label": "程序接口",
+                "description": ""
+            },
+            "url": {
+                "metric": "url",
+                "label": "URL",
+                "description": ""
+            },
+            "agentid": {
+                "metric": "agentid",
+                "label": "探针",
+                "description": ""
+            }
+        }
+    },
+    "datasource-freeze-error-states": {
+        "name": "卡顿异常统计",
+        "datasource": "datasource-freeze-error-states",
+        "category": "application",
+        "data_type": "object",
+        "metrics": {
+            "desc": {
+                "metric": "desc",
+                "isDimension": true,
+                "label": "卡顿类型",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "isDimension": true,
+                "label": "操作系统",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "isDimension": true,
+                "label": "APP版本",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "isDimension": true,
+                "label": "设备型号",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "卡顿次数",
+                "description": ""
+            },
+            "ts": {
+                "metric": "ts",
+                "label": "最近出现时间",
+                "description": ""
+            },
+            "user_count": {
+                "metric": "user_count",
+                "label": "影响用户数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-freeze-error-states--v2": {
+        "name": "卡顿异常统计",
+        "datasource": "datasource-freeze-error-states--v2",
+        "category": "application",
+        "data_type": "top",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "desc": {
+                "metric": "desc",
+                "isDimension": true,
+                "label": "卡顿类型",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "isDimension": true,
+                "label": "操作系统",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "isDimension": true,
+                "label": "APP版本",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "isDimension": true,
+                "label": "设备型号",
+                "description": ""
+            },
+            "error_label": {
+                "metric": "error_label",
+                "isDimension": true,
+                "label": "卡顿名称",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "卡顿次数",
+                "description": ""
+            },
+            "user_count": {
+                "metric": "user_count",
+                "label": "影响用户数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-freeze-states": {
+        "name": "卡顿指标统计",
+        "datasource": "datasource-freeze-states",
+        "category": "application",
+        "data_type": "stats",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "desc": {
+                "metric": "desc",
+                "isDimension": true,
+                "label": "卡顿名称",
+                "description": ""
+            },
+            "error_label": {
+                "metric": "error_label",
+                "isDimension": true,
+                "label": "卡顿类型",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "isDimension": true,
+                "label": "操作系统",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "isDimension": true,
+                "label": "APP版本",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "isDimension": true,
+                "label": "设备型号",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "卡顿次数",
+                "description": ""
+            },
+            "user_count": {
+                "metric": "user_count",
+                "label": "影响用户数",
+                "description": ""
+            },
+            "last_time": {
+                "metric": "last_time",
+                "label": "最近出现时间",
+                "description": ""
+            }
+        }
+    },
+    "datasource-freeze-states-cnt": {
+        "name": "卡顿统计数量",
+        "datasource": "datasource-freeze-states-cnt",
+        "category": "application",
+        "data_type": "total",
+        "metrics": {
+            "total": {
+                "metric": "total",
+                "label": "卡顿次数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-freeze-timeseries": {
+        "name": "卡顿时间线",
+        "datasource": "datasource-freeze-timeseries",
+        "category": "application",
+        "data_type": "time",
+        "metrics": {
+            "total": {
+                "metric": "total",
+                "label": "卡顿次数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-freeze": {
+        "name": "卡顿详情数据",
+        "datasource": "datasource-freeze",
+        "category": "application",
+        "data_type": "raw",
+        "metrics": {
+            "ts": {
+                "metric": "ts",
+                "label": "发生时间",
+                "description": ""
+            },
+            "appsysid": {
+                "metric": "appsysid",
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "label": "应用",
+                "description": ""
+            },
+            "desc": {
+                "metric": "desc",
+                "label": "卡顿名称",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "label": "操作系统",
+                "description": ""
+            },
+            "os_version": {
+                "metric": "os_version",
+                "label": "系统版本",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "label": "应用版本",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "label": "设备型号",
+                "description": ""
+            },
+            "user_id": {
+                "metric": "user_id",
+                "label": "用户ID",
+                "description": ""
+            },
+            "session_id": {
+                "metric": "session_id",
+                "label": "会话ID",
+                "description": ""
+            },
+            "error": {
+                "metric": "error",
+                "label": "异常信息",
+                "description": ""
+            },
+            "city": {
+                "metric": "city",
+                "label": "城市",
+                "description": ""
+            },
+            "province": {
+                "metric": "province",
+                "label": "省份",
+                "description": ""
+            },
+            "ip": {
+                "metric": "ip",
+                "label": "IP",
+                "description": ""
+            }
+        }
+    },
+    "datasource-health-stats": {
+        "name": "健康评分统计",
+        "datasource": "datasource-health-stats",
+        "category": "application",
+        "data_type": "total",
+        "metrics": {
+            "score": {
+                "metric": "score",
+                "label": "分数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-health-timeseries": {
+        "name": "健康评分时间线",
+        "datasource": "datasource-health-timeseries",
+        "category": "application",
+        "data_type": "time",
+        "metrics": {
+            "score": {
+                "metric": "score",
+                "label": "分数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-jserr-error-states": {
+        "name": "脚本错误统计",
+        "datasource": "datasource-jserr-error-states",
+        "category": "application",
+        "data_type": "total",
+        "metrics": {
+            "total": {
+                "metric": "total",
+                "label": "错误次数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-jserr-states": {
+        "name": "脚本错误指标统计",
+        "datasource": "datasource-jserr-states",
+        "category": "application",
+        "data_type": "stats",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "error": {
+                "metric": "error",
+                "isDimension": true,
+                "label": "错误信息",
+                "description": ""
+            },
+            "uri": {
+                "metric": "uri",
+                "isDimension": true,
+                "label": "页面",
+                "description": ""
+            },
+            "browser": {
+                "metric": "browser",
+                "isDimension": true,
+                "label": "浏览器",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "错误次数",
+                "description": ""
+            },
+            "last_time": {
+                "metric": "last_time",
+                "label": "最近出现时间",
+                "description": ""
+            }
+        }
+    },
+    "datasource-jserr-states--v2": {
+        "name": "脚本错误指标统计",
+        "datasource": "datasource-jserr-states--v2",
+        "category": "application",
+        "data_type": "top",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "error": {
+                "metric": "error",
+                "isDimension": true,
+                "label": "错误信息",
+                "description": ""
+            },
+            "uri": {
+                "metric": "uri",
+                "isDimension": true,
+                "label": "页面",
+                "description": ""
+            },
+            "browser": {
+                "metric": "browser",
+                "isDimension": true,
+                "label": "浏览器",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "错误次数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-jserr-timeseries": {
+        "name": "脚本错误时间线",
+        "datasource": "datasource-jserr-timeseries",
+        "category": "application",
+        "data_type": "time",
+        "metrics": {
+            "total": {
+                "metric": "total",
+                "label": "错误次数",
+                "description": ""
+            }
+        }
+    },
+    "datasource-jserrs": {
+        "name": "脚本错误详情",
+        "datasource": "datasource-jserrs",
+        "category": "application",
+        "data_type": "raw",
+        "metrics": {
+            "appsysid": {
+                "metric": "appsysid",
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "label": "应用",
+                "description": ""
+            },
+            "ts": {
+                "metric": "ts",
+                "label": "时间",
+                "description": ""
+            },
+            "view": {
+                "metric": "view",
+                "label": "错误页面",
+                "description": ""
+            },
+            "ip": {
+                "metric": "ip",
+                "label": "IP地址",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "label": "操作系统",
+                "description": ""
+            },
+            "browser": {
+                "metric": "browser",
+                "label": "浏览器",
+                "description": ""
+            },
+            "user_id": {
+                "metric": "user_id",
+                "label": "用户ID",
+                "description": ""
+            },
+            "session_id": {
+                "metric": "session_id",
+                "label": "会话ID",
+                "description": ""
+            },
+            "resolution": {
+                "metric": "resolution",
+                "label": "分辨率",
+                "description": ""
+            },
+            "city": {
+                "metric": "city",
+                "label": "城市",
+                "description": ""
+            },
+            "province": {
+                "metric": "province",
+                "label": "省份",
+                "description": ""
+            },
+            "error": {
+                "metric": "error",
+                "label": "错误信息",
+                "description": ""
+            },
+            "url": {
+                "metric": "url",
+                "label": "访问地址",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "label": "应用版本",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "label": "设备",
+                "description": ""
+            }
+        }
+    },
+    "datasource-appsys-npmtoprules": {
+        "name": "NPM的TOP规则告警",
+        "datasource": "datasource-appsys-npmtoprules",
+        "category": "application",
+        "data_type": "Object",
+        "metrics": {
+            "name": {
+                "metric": "name",
+                "label": "规则",
+                "description": ""
+            },
+            "total": {
+                "metric": "total",
+                "label": "次数",
+                "description": ""
+            }
+        }
+    }
+}
