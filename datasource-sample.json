@@ -1,0 +1,50 @@
+[
+    {
+        "datasource": "datasource-sample-stats",
+        "name": "示例各类状态数据",
+        "data_type": "total",
+        "category": "sample",
+        "metrics": [
+            "people",
+            "fee",
+            "income",
+            "age",
+            "height"
+        ]
+    },
+    {
+        "datasource": "datasource-sample-timeseries",
+        "name": "示例时间线折线数据",
+        "data_type": "time",
+        "category": "sample",
+        "metrics": [
+            "total",
+            "error",
+            "fail",
+            "slow"
+        ]
+    },
+    {
+        "datasource": "datasource-sample-list",
+        "name": "示例详细信息数据",
+        "data_type": "top",
+        "category": "sample",
+        "metrics": [
+            "total",
+            "error",
+            "fail",
+            "slow",
+            "app"
+        ]
+    },
+    {
+        "datasource": "datasource-sample-alarm-list",
+        "name": "示例告警数据",
+        "data_type": "raw",
+        "category": "sample",
+        "metrics": [
+            "content",
+            "ts"
+        ]
+    }
+]

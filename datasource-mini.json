@@ -15,7 +15,8 @@
                 "label": "内存利用率",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-agent-jvm-states--v2": {
         "name": "探针JVM统计",
@@ -23,24 +24,6 @@
         "category": "application",
         "data_type": "top",
         "metrics": {
-            "appsysid": {
-                "metric": "appsysid",
-                "isDimension": true,
-                "label": "应用系统",
-                "description": ""
-            },
-            "appid": {
-                "metric": "appid",
-                "isDimension": true,
-                "label": "应用",
-                "description": ""
-            },
-            "agentid": {
-                "metric": "agentid",
-                "isDimension": true,
-                "label": "应用实例",
-                "description": ""
-            },
             "max_heap_max": {
                 "metric": "max_heap_max",
                 "label": "最大堆内存",
@@ -234,6 +217,26 @@
             "fgc_time": {
                 "metric": "fgc_time",
                 "label": "FGC Time",
+                "description": ""
+            }
+        },
+        "dimensions": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "agentid": {
+                "metric": "agentid",
+                "isDimension": true,
+                "label": "应用实例",
                 "description": ""
             }
         }
@@ -434,7 +437,8 @@
                 "label": "FGC",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-agents": {
         "name": "探针详情数据",
@@ -552,7 +556,8 @@
                 "label": "操作系统版本",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-application-status": {
         "name": "请求状态统计",
@@ -660,7 +665,8 @@
                 "label": "业务数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-application-status-tps": {
         "name": "请求状态统计",
@@ -683,7 +689,8 @@
                 "label": "最小TPS",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-crash-error-states": {
         "name": "崩溃异常统计",
@@ -701,7 +708,8 @@
                 "label": "崩溃次数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-crash-error-states--v2": {
         "name": "崩溃异常统计",
@@ -709,48 +717,6 @@
         "category": "application",
         "data_type": "top",
         "metrics": {
-            "appsysid": {
-                "metric": "appsysid",
-                "isDimension": true,
-                "label": "应用系统",
-                "description": ""
-            },
-            "appid": {
-                "metric": "appid",
-                "isDimension": true,
-                "label": "应用",
-                "description": ""
-            },
-            "name": {
-                "metric": "name",
-                "isDimension": true,
-                "label": "崩溃名称",
-                "description": ""
-            },
-            "type": {
-                "metric": "type",
-                "isDimension": true,
-                "label": "崩溃类型",
-                "description": ""
-            },
-            "os": {
-                "metric": "os",
-                "isDimension": true,
-                "label": "操作系统",
-                "description": ""
-            },
-            "app_version": {
-                "metric": "app_version",
-                "isDimension": true,
-                "label": "APP版本",
-                "description": ""
-            },
-            "device": {
-                "metric": "device",
-                "isDimension": true,
-                "label": "设备型号",
-                "description": ""
-            },
             "total": {
                 "metric": "total",
                 "label": "崩溃次数",
@@ -761,14 +727,8 @@
                 "label": "影响用户数",
                 "description": ""
             }
-        }
-    },
-    "datasource-crash-states": {
-        "name": "崩溃指标统计",
-        "datasource": "datasource-crash-states",
-        "category": "application",
-        "data_type": "stats",
-        "metrics": {
+        },
+        "dimensions": {
             "appsysid": {
                 "metric": "appsysid",
                 "isDimension": true,
@@ -810,7 +770,15 @@
                 "isDimension": true,
                 "label": "设备型号",
                 "description": ""
-            },
+            }
+        }
+    },
+    "datasource-crash-states": {
+        "name": "崩溃指标统计",
+        "datasource": "datasource-crash-states",
+        "category": "application",
+        "data_type": "stats",
+        "metrics": {
             "total": {
                 "metric": "total",
                 "label": "崩溃次数",
@@ -826,6 +794,50 @@
                 "label": "影响用户数",
                 "description": ""
             }
+        },
+        "dimensions": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "name": {
+                "metric": "name",
+                "isDimension": true,
+                "label": "崩溃名称",
+                "description": ""
+            },
+            "type": {
+                "metric": "type",
+                "isDimension": true,
+                "label": "崩溃类型",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "isDimension": true,
+                "label": "操作系统",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "isDimension": true,
+                "label": "APP版本",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "isDimension": true,
+                "label": "设备型号",
+                "description": ""
+            }
         }
     },
     "datasource-crash-states-cnt": {
@@ -839,7 +851,8 @@
                 "label": "崩溃次数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-crash-timeseries": {
         "name": "崩溃时间线",
@@ -852,7 +865,8 @@
                 "label": "崩溃次数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-crashs": {
         "name": "崩溃详情数据",
@@ -925,7 +939,8 @@
                 "label": "IP",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-exception-states": {
         "name": "异常统计",
@@ -933,30 +948,6 @@
         "category": "application",
         "data_type": "stats",
         "metrics": {
-            "appsysid": {
-                "metric": "appsysid",
-                "isDimension": true,
-                "label": "应用系统",
-                "description": ""
-            },
-            "appid": {
-                "metric": "appid",
-                "isDimension": true,
-                "label": "应用",
-                "description": ""
-            },
-            "name": {
-                "metric": "name",
-                "isDimension": true,
-                "label": "异常名称",
-                "description": ""
-            },
-            "url": {
-                "metric": "url",
-                "isDimension": true,
-                "label": "URL",
-                "description": ""
-            },
             "request_total": {
                 "metric": "request_total",
                 "label": "请求数",
@@ -982,14 +973,8 @@
                 "label": "异常变化",
                 "description": ""
             }
-        }
-    },
-    "datasource-exception-states--v2": {
-        "name": "异常统计",
-        "datasource": "datasource-exception-states--v2",
-        "category": "application",
-        "data_type": "top",
-        "metrics": {
+        },
+        "dimensions": {
             "appsysid": {
                 "metric": "appsysid",
                 "isDimension": true,
@@ -1013,7 +998,15 @@
                 "isDimension": true,
                 "label": "URL",
                 "description": ""
-            },
+            }
+        }
+    },
+    "datasource-exception-states--v2": {
+        "name": "异常统计",
+        "datasource": "datasource-exception-states--v2",
+        "category": "application",
+        "data_type": "top",
+        "metrics": {
             "total": {
                 "metric": "total",
                 "label": "异常数",
@@ -1022,6 +1015,32 @@
             "per": {
                 "metric": "per",
                 "label": "异常占比",
+                "description": ""
+            }
+        },
+        "dimensions": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "name": {
+                "metric": "name",
+                "isDimension": true,
+                "label": "异常名称",
+                "description": ""
+            },
+            "url": {
+                "metric": "url",
+                "isDimension": true,
+                "label": "URL",
                 "description": ""
             }
         }
@@ -1037,7 +1056,8 @@
                 "label": "异常数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-exception-timeseries": {
         "name": "异常时间线",
@@ -1050,7 +1070,8 @@
                 "label": "异常数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-application-exceptions": {
         "name": "异常详情数据",
@@ -1108,7 +1129,8 @@
                 "label": "探针",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-freeze-error-states": {
         "name": "卡顿异常统计",
@@ -1116,30 +1138,6 @@
         "category": "application",
         "data_type": "object",
         "metrics": {
-            "desc": {
-                "metric": "desc",
-                "isDimension": true,
-                "label": "卡顿类型",
-                "description": ""
-            },
-            "os": {
-                "metric": "os",
-                "isDimension": true,
-                "label": "操作系统",
-                "description": ""
-            },
-            "app_version": {
-                "metric": "app_version",
-                "isDimension": true,
-                "label": "APP版本",
-                "description": ""
-            },
-            "device": {
-                "metric": "device",
-                "isDimension": true,
-                "label": "设备型号",
-                "description": ""
-            },
             "total": {
                 "metric": "total",
                 "label": "卡顿次数",
@@ -1155,26 +1153,8 @@
                 "label": "影响用户数",
                 "description": ""
             }
-        }
-    },
-    "datasource-freeze-error-states--v2": {
-        "name": "卡顿异常统计",
-        "datasource": "datasource-freeze-error-states--v2",
-        "category": "application",
-        "data_type": "top",
-        "metrics": {
-            "appsysid": {
-                "metric": "appsysid",
-                "isDimension": true,
-                "label": "应用系统",
-                "description": ""
-            },
-            "appid": {
-                "metric": "appid",
-                "isDimension": true,
-                "label": "应用",
-                "description": ""
-            },
+        },
+        "dimensions": {
             "desc": {
                 "metric": "desc",
                 "isDimension": true,
@@ -1198,13 +1178,15 @@
                 "isDimension": true,
                 "label": "设备型号",
                 "description": ""
-            },
-            "error_label": {
-                "metric": "error_label",
-                "isDimension": true,
-                "label": "卡顿名称",
-                "description": ""
-            },
+            }
+        }
+    },
+    "datasource-freeze-error-states--v2": {
+        "name": "卡顿异常统计",
+        "datasource": "datasource-freeze-error-states--v2",
+        "category": "application",
+        "data_type": "top",
+        "metrics": {
             "total": {
                 "metric": "total",
                 "label": "卡顿次数",
@@ -1215,14 +1197,8 @@
                 "label": "影响用户数",
                 "description": ""
             }
-        }
-    },
-    "datasource-freeze-states": {
-        "name": "卡顿指标统计",
-        "datasource": "datasource-freeze-states",
-        "category": "application",
-        "data_type": "stats",
-        "metrics": {
+        },
+        "dimensions": {
             "appsysid": {
                 "metric": "appsysid",
                 "isDimension": true,
@@ -1237,12 +1213,6 @@
             },
             "desc": {
                 "metric": "desc",
-                "isDimension": true,
-                "label": "卡顿名称",
-                "description": ""
-            },
-            "error_label": {
-                "metric": "error_label",
                 "isDimension": true,
                 "label": "卡顿类型",
                 "description": ""
@@ -1265,6 +1235,20 @@
                 "label": "设备型号",
                 "description": ""
             },
+            "error_label": {
+                "metric": "error_label",
+                "isDimension": true,
+                "label": "卡顿名称",
+                "description": ""
+            }
+        }
+    },
+    "datasource-freeze-states": {
+        "name": "卡顿指标统计",
+        "datasource": "datasource-freeze-states",
+        "category": "application",
+        "data_type": "stats",
+        "metrics": {
             "total": {
                 "metric": "total",
                 "label": "卡顿次数",
@@ -1280,6 +1264,50 @@
                 "label": "最近出现时间",
                 "description": ""
             }
+        },
+        "dimensions": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "desc": {
+                "metric": "desc",
+                "isDimension": true,
+                "label": "卡顿名称",
+                "description": ""
+            },
+            "error_label": {
+                "metric": "error_label",
+                "isDimension": true,
+                "label": "卡顿类型",
+                "description": ""
+            },
+            "os": {
+                "metric": "os",
+                "isDimension": true,
+                "label": "操作系统",
+                "description": ""
+            },
+            "app_version": {
+                "metric": "app_version",
+                "isDimension": true,
+                "label": "APP版本",
+                "description": ""
+            },
+            "device": {
+                "metric": "device",
+                "isDimension": true,
+                "label": "设备型号",
+                "description": ""
+            }
         }
     },
     "datasource-freeze-states-cnt": {
@@ -1293,7 +1321,8 @@
                 "label": "卡顿次数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-freeze-timeseries": {
         "name": "卡顿时间线",
@@ -1306,7 +1335,8 @@
                 "label": "卡顿次数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-freeze": {
         "name": "卡顿详情数据",
@@ -1384,7 +1414,8 @@
                 "label": "IP",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-health-stats": {
         "name": "健康评分统计",
@@ -1397,7 +1428,8 @@
                 "label": "分数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-health-timeseries": {
         "name": "健康评分时间线",
@@ -1410,7 +1442,8 @@
                 "label": "分数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-jserr-error-states": {
         "name": "脚本错误统计",
@@ -1423,7 +1456,8 @@
                 "label": "错误次数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-jserr-states": {
         "name": "脚本错误指标统计",
@@ -1431,36 +1465,6 @@
         "category": "application",
         "data_type": "stats",
         "metrics": {
-            "appsysid": {
-                "metric": "appsysid",
-                "isDimension": true,
-                "label": "应用系统",
-                "description": ""
-            },
-            "appid": {
-                "metric": "appid",
-                "isDimension": true,
-                "label": "应用",
-                "description": ""
-            },
-            "error": {
-                "metric": "error",
-                "isDimension": true,
-                "label": "错误信息",
-                "description": ""
-            },
-            "uri": {
-                "metric": "uri",
-                "isDimension": true,
-                "label": "页面",
-                "description": ""
-            },
-            "browser": {
-                "metric": "browser",
-                "isDimension": true,
-                "label": "浏览器",
-                "description": ""
-            },
             "total": {
                 "metric": "total",
                 "label": "错误次数",
@@ -1471,14 +1475,8 @@
                 "label": "最近出现时间",
                 "description": ""
             }
-        }
-    },
-    "datasource-jserr-states--v2": {
-        "name": "脚本错误指标统计",
-        "datasource": "datasource-jserr-states--v2",
-        "category": "application",
-        "data_type": "top",
-        "metrics": {
+        },
+        "dimensions": {
             "appsysid": {
                 "metric": "appsysid",
                 "isDimension": true,
@@ -1508,10 +1506,50 @@
                 "isDimension": true,
                 "label": "浏览器",
                 "description": ""
-            },
+            }
+        }
+    },
+    "datasource-jserr-states--v2": {
+        "name": "脚本错误指标统计",
+        "datasource": "datasource-jserr-states--v2",
+        "category": "application",
+        "data_type": "top",
+        "metrics": {
             "total": {
                 "metric": "total",
                 "label": "错误次数",
+                "description": ""
+            }
+        },
+        "dimensions": {
+            "appsysid": {
+                "metric": "appsysid",
+                "isDimension": true,
+                "label": "应用系统",
+                "description": ""
+            },
+            "appid": {
+                "metric": "appid",
+                "isDimension": true,
+                "label": "应用",
+                "description": ""
+            },
+            "error": {
+                "metric": "error",
+                "isDimension": true,
+                "label": "错误信息",
+                "description": ""
+            },
+            "uri": {
+                "metric": "uri",
+                "isDimension": true,
+                "label": "页面",
+                "description": ""
+            },
+            "browser": {
+                "metric": "browser",
+                "isDimension": true,
+                "label": "浏览器",
                 "description": ""
             }
         }
@@ -1527,7 +1565,8 @@
                 "label": "错误次数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-jserrs": {
         "name": "脚本错误详情",
@@ -1615,7 +1654,8 @@
                 "label": "设备",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     },
     "datasource-appsys-npmtoprules": {
         "name": "NPM的TOP规则告警",
@@ -1633,6 +1673,7 @@
                 "label": "次数",
                 "description": ""
             }
-        }
+        },
+        "dimensions": {}
     }
 }

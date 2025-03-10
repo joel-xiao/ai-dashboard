@@ -24,7 +24,7 @@
 
 <body>
   <!-- 引用 data.js 文件 -->
-  <script src="./view_prompt_word_results.js"></script>
+  <script src="./view_db.js"></script>
   <script>
     function renderComponents() {
       jsonData.forEach(item => {
@@ -41,8 +41,8 @@
 
         const metricsInfo = document.createElement('p');
         let metricsText = '';
-        for (const [source, indicators] of Object.entries(item.data)) {
-          metricsText += `数据源: ${source}, 指标: ${indicators.join(', ')}`;
+        for (const [source, {dimensions, metrics}] of Object.entries(item.data)) {
+          metricsText += `数据源: ${source}, 纬度: ${dimensions.join(', ')}, 指标: ${metrics.join(', ')}`;
         }
         metricsInfo.textContent = metricsText;
         div.appendChild(metricsInfo);
